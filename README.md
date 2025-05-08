@@ -1,27 +1,25 @@
-# Lab 2
+IP Address Analyzer
+This focuses on analyzing IPv4 CIDR blocks, calculating network details, and checking IP address membership—key and networking fundamentals.
 
-CSE 124/224 Spring 2025 Lab 2 Starter Code
+Project Summary
+This tool:
+- Parses a given CIDR block
+- Outputs the network address, broadcast address, subnet mask, and number of usable hosts
+- Optionally, checks whether a given IP address belongs to the CIDR block
 
-This repository contains the startercode that you'll use for lab 2.  
+Build Instructions
+To build the binary:
+bash: go build -o bin/ipanalyzer src/ipanalyzer.go
 
-## Building
+Usage 
+CIDR Analysis:./bin/ipanalyzer 192.168.1.0/24
+IP Membership Check:./bin/ipanalyzer 192.168.1.0/24 192.168.1.25
 
-To build your IP Analyzer program:
+Example Output 
+Analyzing network: 192.168.1.0/24
 
-$ go build -o bin/ipanalyzer src/ipanalyzer.go
-
-
-## Submission
-
-Your submission should include your code in the `src` directory (and should be able to be built with the above command)
-
-You should include a file called report.pdf that contains the answers to the questions in the lab spec.
-
-## Checklist
-
-* Your ipanalyzer code implementation in src/ipanalyzer.go
-* A lab report in report.pdf (stored in the base directory)
-* Push your code/report to GitHub.com to submit your code.
-
-Good luck!
+Network address: 192.168.1.0
+Broadcast address: 192.168.1.255
+Subnet mask: 255.255.255.0
+Number of usable hosts: 254
 
